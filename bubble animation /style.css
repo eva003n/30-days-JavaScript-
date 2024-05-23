@@ -1,0 +1,47 @@
+
+body{
+  background:black;
+  display:flex;
+  justify-content:center;
+  height:100vh;
+  align-items:center;
+  overflow:hidden;
+    
+}
+span{
+ border-radius:200px;
+  border-color:white;
+  width:100px;
+  height:100px;
+  position: absolute;
+  background-image:url(bubble.png);
+  background-size:cover;
+  background-position:center;
+  transition: animation 10s;
+  touch-action:none;
+  animation:animate 6s linear;
+  
+}
+
+@keyframes animate{
+  0%{
+    transform:translate(0);
+  }
+  25%{
+     filter:hue-rotate(360deg);
+  }
+  50%{
+    
+    filter:hue-rotate(720deg);
+    filter:brightness(130%);
+    
+  }
+  75%{
+   filter:brightness(90%);
+}
+100%{
+  transform:translate(-50%,-5000%);
+  filter:hue-rotate(1080deg);
+  filter:brightness(200%);
+}
+}
